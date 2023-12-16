@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Information Propagation in Complex Networks</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<!-- Theme used for syntax highlighting of code -->
+	    <link rel="stylesheet" href="lib/css/tomorrow.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div class="bbox">
+						<h3>Information Propagation in<br/>Complex Networks</h3><br/><h4>Structures and Dynamics</h4>
+						<hr class="shadow">
+						<p class="largefnt" style="text-align: center;">Marcus Märtens</p>
+						<!--
+						<p class="mediumfnt" style="text-align: center;background-color: lightgrey;margin:10%;">Follow this presentation on your device: <a href="https://goo.gl/SLr7Gx">https://goo.gl/SLr7Gx</a></p>
+						-->
+
+						<table style="margin-top:150px">
+							
+							<tbody class="invis" style="width:100%;">
+							<tr>
+								<td>
+									<img width="200px" height="110px" data-src="./img/NAS_blue_200px.png" alt="NAS logo">
+								</td>
+								<td style="padding-right:100px">
+									Network<br/>Architectures and<br/>Services
+								</td>
+								<td>
+									<img width="394px" height="110px" data-src="./img/TUDLogo.png" alt="TU Delft logo">
+								</td>
+							</tr>
+							</tbody>
+						</table>					
+					</div>
+				</section>
+
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>What is information propagation?</h3></div>
+						<div class="sliderow">
+							<div class="leftcol">
+								<img src="img/whisper.jpg"/>
+							</div>
+							<div class="rightcol">
+								<img src="img/whisperchain.jpg"/>
+							</div>
+						</div>
+						<div class="slidefooter">
+							I tell you something you did not know before.
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="convex-in fade-out">
+					<div class="bbox">
+						<div class="slideheader"><h3>Classical information theory</h3></div>
+						<div class="sliderow">
+							<div class="leftcol" style="width:60%">							
+								<img src="img/sender1.svg" style="padding-top:150px"/>
+							</div>
+							<div class="rightcol" style="width:39%">														
+							<img src="img/shannon.jpg" height="300px" style="padding-top:30px"><br/>
+							<p class="smallfnt">Claude Shannon (1916-2001)<br/>father of information theory</p>
+							</div>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>				
+
+				<section data-transition="fade">
+					<div class="bbox">
+						<div class="slideheader"><h3>What if there are more receivers?</h3></div>
+						<div class="sliderow">
+							<img src="img/sender2.svg" style="padding-top:30px"/>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>
+
+				<section data-transition="fade">
+					<div class="bbox">
+						<div class="slideheader"><h3>... that can be senders as well?</h3></div>
+						<div class="sliderow">
+							<img src="img/sender3.svg" style="padding-top:30px"/>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>				
+	
+				<section data-transition="fade">
+					<div class="bbox">
+						<div class="slideheader"><h3>... with different channels?</h3></div>
+						<div class="sliderow">
+							<img src="img/sender4.svg" style="padding-top:30px"/>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>				
+		
+				<section data-transition="fade-in convex-out">
+					<div class="bbox">
+						<div class="slideheader"><h3>What if there are really a lot more?</h3></div>
+						<div class="sliderow">
+							<img src="img/tech-whois-net.png" style="height:500px"/>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>		
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Two aspects of information propagation</h3></div>
+						<div class="sliderow">
+							<div class="leftcol">							
+								<p class="largefnt">Structure</p>
+								<p class="mediumfnt">networks: nodes and links</p>
+								<img src="img/barbell_network3.svg" style="padding-top:93px;padding-bottom:100px"/>
+								<p class="mediumfnt">answers: <b>Who</b> can exchange information?</p>
+							</div>
+							<div class="rightcol">														
+								<p class="largefnt">Dynamics</p>
+								<p class="mediumfnt">change over time<br/>
+													 models, rules and algorithms</p>
+								<img src="img/dynamics.svg" style="height:300px"/>
+								<p class="mediumfnt">answers: <b>How</b> is information exchanged?</p>
+							</div>
+						</div>							
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>	
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Ch 4: Computer worms</h3></div>
+						<div class="sliderow">
+							<div class="leftcol">							
+								<p class="largefnt">Structure</p>
+								<ul>
+									<li>IP4 address space</li>
+									<li>nodes: computers, hosts</li>
+									<li>links: Internet</li>
+								</ul>
+								<p class="largefnt">Dynamics</p>
+								<ul>
+									<li><b>worm</b> infects host</li>
+									<li><b>worm</b> sends copies to random addresses</li>
+									<li><b>administrator</b> removes infection</li>
+								</ul>
+								<p class="largefnt">Result</p>
+								<p class="mediumfnt">Long-term evolution of computer worms
+									can be described by time-dependent epidemic model</p>
+							</div>
+							<div class="rightcol">	
+								<img src="img/wormwindow.png" style="width:100%"/>
+								<img src="img/conf_global_4.png" style="width:80%"/>
+							</div>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="bbox">
+						<div class="slideheader"><h3>Ch 3: Human brains</h3></div>
+						<div class="sliderow">
+							<div class="leftcol">
+								<p class="largefnt">Structure</p>
+								<ul>
+									<li>MEG measurements</li>
+									<li>nodes: brain regions</li>
+									<li>links: increased information flow</li>
+								</ul>
+								<p class="largefnt">Dynamics</p>
+								<ul>
+									<li>microscopic: neuronal activity</li>
+									<li>macroscopic: information flow between brain regions</li>
+								</ul>
+								<p class="largefnt">Result</p>
+								<p class="mediumfnt">Clusters of small networks provide a spatial
+									meaningful high-order organization of the brain.
+								</p>
+							</div>
+							<div class="rightcol" >
+								<img src="img/two-hop.svg" style="height:200px"/>
+								<img src="img/brains.png" style="width:100%; padding-top:40px"/>
+							</div>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+				</section>
+
+				<section>
+						<div class="bbox">
+							<div class="slideheader"><h3>Ch 2: Antisocial behavior</h3></div>
+							<div class="sliderow">
+								<div class="leftcol">
+									<p class="largefnt">Structure</p>
+									<ul>
+										<li>short-term: 5vs5 ad-hoc matches</li>
+										<li>long-term: player networks</li>
+										<li>nodes: players</li>
+										<li>links: defined by teams</li>
+									</ul>
+									<p class="largefnt">Dynamics</p>
+									<ul>
+										<li>game interactions (killing avatars)</li>
+										<li>text-chat between competing teams</li>
+										<li><b>text-chat between members of a single team</b></li>
+									</ul>
+									<p class="largefnt">Result</p>
+									<p class="mediumfnt">Detection system for antisocial behavior.
+									</p>
+								</div>
+								<div class="rightcol" >
+									<img src="img/noobcloud.svg" style="width:100%"/>
+									<img src="img/predict_accuracy.png" style="width:100%; padding-top:10px"/>
+								</div>
+							</div>
+							<div class="slidefooter">
+							</div>
+						</div>
+					</section>
+
+				<section>
+						<div class="bbox" >
+							<div class="slideheader"><h3>Ch 5: Superinfection</h3></div>
+							<div class="sliderow">
+								<ul>
+									<li>What happens when two propagations processes compete?</li>
+									<li>Can we fight a "bad" computer worm by spreading a "good" computer worm?</li>
+								</ul>
+								<p class="mediumfnt">Theoretical models for propagation of one virus: <b>epidemic model</b><br/>
+								Extension to more viruses: <b>superinfection model</b></p>
+							</div>
+							<div class="sliderow" style="margin-top:200px; border:0px black solid;">							
+								<div class="leftcol">
+								<img src="img/superinfschema.svg"/>
+								<p class="largefnt">Result</p>
+								<p class="mediumfnt">Conditions for stable coexistence of both viruses and for extinctions exist.</p>
+								</div>
+								<div class="rightcol">
+								<img src="img/superinfection.gif"/>
+								</div>
+							</div>
+							<div class="slidefooter">
+
+							</div>
+						</div>
+				</section>					
+
+				<section>
+					<div class="bbox" >
+						<div class="slideheader"><h3>Ch 6: Learning network structures</h3></div>
+						<div class="sliderow">
+							<ul>
+								<li>The structure of the network is <b>essential</b> for <b>any</b> propagation!</li>
+								<li><b>Formulas</b> relate structural network properties with each other, for example:</li>
+							</ul>
+							<p class="mediumfnt" style="border: solid 3px red;margin-left:35%;margin-right:35%">
+								$\blacktriangle = \frac{1}{6} \sum\limits_{i = 1}^{N} \lambda_i^3$
+							</p>
+							<ul>
+								<li>Can a smart machine come up with formulas by studying networks?</li>
+							</ul>
+							
+							<img src="img/symbreg.png" height="300px"/>
+						</div>
+						<div class="slidefooter">
+						</div>
+					</div>
+			</section>	
+
+			<section>
+				<div class="bbox">
+					<div class="slideheader"><h3>Closing thoughts</h3></div>
+					<div class="sliderow">
+						
+						<ul>
+							<li class="fragment fade-in">Did I tell you something you did not know before?</li>
+							<li class="fragment fade-in">Good! Information propagation works.</li>
+							<li class="fragment fade-in">Feel free to propagate this information.
+							<img src="img/ripples.jpg"/></li>
+						</ul>
+						
+						<p class="mediumfnt fragment fade-in">Many thanks to all my collaborators, co-authors and supporters!</p>
+					</div>
+					<div class="slidefooter">
+					</div>
+				</div>
+			</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				
+				// workaround to get a nice representation for printing
+				pdfMaxPagesPerSlide: 1,
+
+				// Vertical centering of slides
+				center: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+                
+				// Display the page number of the current slide
+				slideNumber: 'c/t',
+
+				// Transition style
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Transition speed
+				transitionSpeed: 'fast', // default/fast/slow
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					// MathJax
+        			{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
