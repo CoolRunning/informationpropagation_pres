@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (http://matplotlib.org/) -->
+<svg height="425pt" version="1.1" viewBox="0 0 425 425" width="425pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 425.378125 
+L 425.915312 425.378125 
+L 425.915312 0 
+L 0 0 
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path clip-path="url(#pce7eefc3ef)" d="M 230.030313 401.840102 
+C 279.227429 401.840102 326.416183 381.21569 361.203798 344.509153 
+C 395.991413 307.802617 415.537635 258.010882 415.537635 206.1 
+C 415.537635 154.189118 395.991413 104.397383 361.203798 67.690847 
+C 326.416183 30.98431 279.227429 10.359898 230.030313 10.359898 
+C 180.833196 10.359898 133.644442 30.98431 98.856827 67.690847 
+C 64.069212 104.397383 44.52299 154.189118 44.52299 206.1 
+C 44.52299 258.010882 64.069212 307.802617 98.856827 344.509153 
+C 133.644442 381.21569 180.833196 401.840102 230.030313 401.840102 
+z
+" style="fill:none;stroke:#000000;stroke-linejoin:miter;stroke-width:2;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#pce7eefc3ef)" d="M 230.030313 392.195238 
+C 276.803299 392.195238 321.666882 372.58707 354.740378 337.689205 
+C 387.813875 302.79134 406.396979 255.453034 406.396979 206.1 
+C 406.396979 156.746966 387.813875 109.40866 354.740378 74.510795 
+C 321.666882 39.61293 276.803299 20.004762 230.030313 20.004762 
+C 183.257326 20.004762 138.393743 39.61293 105.320247 74.510795 
+C 72.24675 109.40866 53.663646 156.746966 53.663646 206.1 
+C 53.663646 255.453034 72.24675 302.79134 105.320247 337.689205 
+C 138.393743 372.58707 183.257326 392.195238 230.030313 392.195238 
+z
+" style="fill:none;stroke:#ff0000;stroke-linejoin:miter;stroke-width:2;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#pce7eefc3ef)" d="z
+" style="fill:none;stroke:#0000ff;stroke-linejoin:miter;stroke-width:2;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pce7eefc3ef">
+   <rect height="390.8" width="370.37" x="44.845313" y="10.7"/>
+  </clipPath>
+ </defs>
+</svg>
